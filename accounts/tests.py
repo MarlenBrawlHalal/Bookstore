@@ -37,7 +37,7 @@ class SignUpPageTests(TestCase):
         self.assertEqual(self.response.status_code, 200)
         self.assertTemplateUsed(self.response, 'registration/signup.html')
         self.assertContains(self.response, 'Sign Up')
-        self.assertNotContains(self.response, 'SUKA')
+        self.assertNotContains(self.response, 'I should not be here')
 
     def test_signup_form(self):
         form = self.response.context.get('form')
